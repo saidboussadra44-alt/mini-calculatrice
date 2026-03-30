@@ -10,6 +10,27 @@ A simple web-based calculator built with Python Flask and HTML/CSS/JavaScript.
 - Clear button to reset the display
 - Responsive design
 
+## CI/CD
+
+This project uses GitHub Actions for continuous integration and testing. The pipeline runs on every push and pull request to the main/master branch, testing against multiple Python versions (3.8-3.12).
+
+### Tests
+
+Run tests locally:
+```bash
+pip install -r requirements.txt
+pip install pytest
+pytest test_app.py -v
+```
+
+### Linting
+
+Code is linted with flake8:
+```bash
+pip install flake8
+flake8 app.py test_app.py
+```
+
 ## How to Run
 
 1. Make sure you have Python installed
@@ -29,3 +50,6 @@ A simple web-based calculator built with Python Flask and HTML/CSS/JavaScript.
 
 - `app.py`: Flask backend server
 - `templates/index.html`: HTML frontend with embedded CSS and JavaScript
+- `test_app.py`: Unit tests for the calculator functionality
+- `requirements.txt`: Python dependencies
+- `.github/workflows/ci-cd.yml`: GitHub Actions CI/CD pipeline
